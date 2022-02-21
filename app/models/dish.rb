@@ -2,10 +2,10 @@ class Dish < ApplicationRecord
   # Direct associations
 
   belongs_to :cuisine,
-             :counter_cache => true
+             counter_cache: true
 
   has_many   :bookmarks,
-             :dependent => :destroy
+             dependent: :destroy
 
   # Indirect associations
 
@@ -16,5 +16,4 @@ class Dish < ApplicationRecord
   def to_s
     dish_name
   end
-
 end
