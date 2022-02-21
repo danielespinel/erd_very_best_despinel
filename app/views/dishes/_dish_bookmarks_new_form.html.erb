@@ -1,0 +1,50 @@
+<!-- Form bookmark start -->
+<%= form_with(model: @bookmark, local: true) do |f| %>
+<!-- Form bookmark end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <%= f.label :user_id %>
+
+    <!-- Input for user_id start -->
+    <%= f.text_field :user_id, class: "form-control" %>
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for dish_id start -->
+  <!-- Input for dish_id start -->
+  <%= f.hidden_field :dish_id, value: @dish.id %>
+  <!-- Input for dish_id end -->
+  <!-- Label and input for dish_id end -->
+
+  <!-- Label and input for venue_id start -->
+  <div class="form-group">
+    <%= f.label :venue_id %>
+
+    <!-- Input for venue_id start -->
+    <%= f.text_field :venue_id, class: "form-control" %>
+    <!-- Input for venue_id end -->
+  </div>
+  <!-- Label and input for venue_id end -->
+
+  <!-- Label and input for timestamp start -->
+  <div class="form-group">
+    <%= f.label :timestamp %>
+    <!-- Input for timestamp start -->
+    <%= f.datetime_select :timestamp, class: "form-control" %>
+    <!-- Input for timestamp end -->
+  </div>
+  <!-- Label and input for timestamp end -->
+
+  <!-- Label and input for note start -->
+  <div class="form-group">
+    <%= f.label :note %>
+    <!-- Input for note start -->
+    <%= f.text_area :note, rows: "3", class: "form-control" %>
+    <!-- Input for note end -->
+  </div>
+  <!-- Label and input for note end -->
+
+  <%= f.submit "Create bookmark", class: "btn btn-block btn-outline-secondary" %>
+<% end %>
